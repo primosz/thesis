@@ -1,0 +1,262 @@
+\documentclass[english,masters]{wizthesis}
+
+\usepackage[utf8]{inputenc}
+\usepackage{enumitem} % itemize, enumerate, and description environments
+\usepackage{booktabs} % Tables
+\usepackage{siunitx} % Percentages and other SI units
+\usepackage{float} % H float positioning
+% Please load this as the very last package for footnotes to link correctly
+\usepackage{hyperref} % Hyperlinks
+
+% Set up the thesis
+\author{Piotr Majchrowski}
+\title{Classification with type-2 fuzzy information systems and Takagi-Sugeno reasoning}
+\supervisor{dr inż.\ Martin Tabakov}
+\fieldofstudy{Applied Computer Science}
+\keywords{Lorem ipsum, dolor sit amet, Consectetur, Praesent, vel quam, Sit amet
+laoreet, In tristique, Sagittis nibh}
+\summary{
+Mauris sagittis ut elit sit amet molestie. Mauris consectetur tortor quis magna.
+Sed et risus lorem. Etiam faucibus, nisi eget tempor accumsan, magna nunc
+pharetra lacus, nec semper neque ligula at magna. Curabitur ultrices a tellus
+nec viverra. Nam vestibulum, dui et ultricies convallis, augue leo vulputate
+dolor, ut varius ligula nisi eget metus. In vestibulum nibh quis nulla tempus,
+gravida ornare velit pulvinar. Nunc rhoncus nisi in turpis dignissim venenatis.
+Nunc sapien.
+}
+\year=2021
+
+% Set up the style of code listings (optional)
+\setminted{frame=single,breaklines,linenos}
+% Set up the bibliography style
+\bibliographystyle{acm}
+
+\begin{document}
+
+\frontmatter % Disable page and chapter numbering for this section
+
+\maketitle
+
+% '\chapter*' removes both abstracts from the table of contents
+\chapter*{Streszczenie}
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ex diam, vehicula
+at lorem sit amet, imperdiet bibendum leo. Duis vestibulum eu ipsum sit amet
+dictum. Nunc vel orci mattis dui laoreet mattis et eget odio. Fusce posuere
+augue sed augue convallis lobortis. Vestibulum ante ipsum primis in faucibus
+orci luctus et ultrices posuere cubilia curae; Sed ultrices id turpis a dictum.
+Nullam pellentesque, magna sed fermentum varius, lorem augue scelerisque enim,
+non scelerisque nisi tortor at lorem. Donec in purus ut ante faucibus semper nec
+vitae ligula. Vivamus quis erat ut metus venenatis aliquam quis sed augue.
+
+Pellentesque laoreet tellus quis augue interdum sollicitudin quis id enim. Morbi
+malesuada euismod posuere. Proin rutrum leo iaculis nibh semper molestie. Etiam
+scelerisque erat in nunc rhoncus, a tempus turpis rutrum. Cras laoreet aliquam
+magna ut congue. Mauris eu tincidunt augue. Nulla ex neque, lobortis et bibendum
+non, consequat eu odio. Donec euismod nisi porta, placerat elit vel, rutrum
+mauris. Curabitur id scelerisque urna, vel varius augue.
+
+\tableofcontents
+
+\mainmatter % Re-enable page and chapter numbering
+
+{
+\chapter{Introduction}
+\section{Overview}
+
+\section{Motivation}
+
+\section{Work's goal}
+
+
+\chapter{Literature review}
+\section{Type-2 fuzzy sets usage}
+Type-2 fuzzy logic has been applied in many areas and it has shown many notable achievements in plenty of applications. Design of type-2 fuzzy logic systems is primarily focused on handling in information to improve effectiveness of the system for specific use. Performance of T2FL is better than in T1FL in many ways with use of the same construction of type-2 fuzzy rules as in type-1 cases. Type-2 fuzzy logic has been proven as effective solution for handling uncertainties in complex real world problems. Most of significant researches has been focusing around interval T2 fuzzy systems because of their complexity in computation. Very insightful Mittal's review \cite{MITTAL2020103916} has shown variety of recent and successful research applications of type-2 FL. Work shows type-2 fuzzy logic used in variety areas, emphasizing using it particularly in control, classification and pattern recognition. Authors provide meaningful review of T2FLS, most successful applications along with its comparison with T1FS. 
+
+\section{TSK optimization}
+There has been many papers proposing different approaches for tuning Takagi-Sugeno fuzzy systems and optimizing its parameters. Several works used evolutionary algorithms such as genetic algorithms\cite{Enwang}, simulated annealing or particle-swarm optimization (PSO)\cite{Elragal14} in solving global optimization problems.
+In case of Takagi-Sugeno classifiers - membership functions and rules consequent are most significant parameters to be optimized. Since rules for Takagi-Sugeno IT1 systems have the same for as in IT2 systems - process of tuning is very similar in both cases. Example of tuning Takagi-Sugeno FLS has been presented in Hassan's work\cite{hassan}, where PSO is used to optimize parameters of input membership functions and consequent parameters, where performances of output system show promising result with accurate classification. Another approach of consequent was presented in Boumella's paper \cite{Boumella} where IT2 Takagi-Sugeno fuzzy logic system after tuning was proven to handle uncertainties better that lower type FSs.
+All of cited works lead to conslusion that fuzzy logic system optimization is important to improve its accuracy, especially in case of Takagi-Sugeno system, where rules consequents are most significant factor in classification process. 
+
+} 
+\section{Pawlak's information systems usages}
+Rough sets theory in form of information system has been used in many researches. In last decades it has become a very significant part of soft computing. Currently research around rough sets theory is focused around practical usage of it in many real-world applications. It is most commonly used in decision systems for e.g. data reduction, finding dependencies in data, attribute selection and also in decision rules induction. Honest evaluation of rough sets potential was presented in Peters' work. \cite{Peters2012RoughSS}.
+Authors discover several applications of the theory and present practical use cases and provides clear view and description of applications.
+Another significant literature record is McKee's work\cite{MCKEE}, where authors try to predict bankruptcy of American companies combining genetic programming and rough sets theory. Promising results were achieved with constructed model along with numerous notes about preventing companies from bankruptcy. Work proves that using rough sets and genetic programming is an option to develop useful models in efficient way.
+
+
+GA + rough sets \cite{MCKEE}, information systems review in medical context \cite{hassanien}
+
+\section{Building base of knowledge for reasoning model}
+Donec dignissim venenatis urna ac tincidunt. Donec id nisi sed libero tempus
+dignissim vitae eget elit. Ut ullamcorper purus nec elit varius mattis ut id
+leo. Fusce quam nunc, convallis vitae velit id, sodales vestibulum arcu.
+Suspendisse potenti. Vivamus pellentesque ante vitae orci blandit ultricies.
+Nulla facilisi. Nunc fringilla tempus justo, non fermentum dui pellentesque
+eget. Sed posuere finibus aliquam. Interdum et malesuada fames ac ante ipsum
+primis in faucibus tabelus~\ref{tab:jezyki}. Nulla quis elementum ipsum, at
+eleifend sem.
+\begin{table}[ht]
+  \centering
+  \caption{Vestibulum aliquam sem ultricies risus efficitur
+  (\textit{źródło: \cite{latexcompanion}})}
+  \label{tab:jezyki}
+  \begin{tabular}{@{}clr@{}}
+    \toprule
+    Ordo & Lingua     & Portio                \\ \midrule
+    1    & JavaScript & \SI{18.703}{\percent} \\
+    2    & Python     & \SI{16.238}{\percent} \\
+    3    & Java       & \SI{10.938}{\percent} \\
+    4    & Go         & \SI{9.005}{\percent}  \\
+    5    & C++        & \SI{7.423}{\percent}  \\
+    6    & Ruby       & \SI{6.812}{\percent}  \\ \bottomrule
+  \end{tabular}
+\end{table}
+Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos
+himenaeos. Morbi sed malesuada dolor. Etiam scelerisque ligula placerat elit
+sodales, a tincidunt nulla lacinia. Donec nisl lectus, commodo porttitor nunc
+in, efficitur rutrum neque. Curabitur pulvinar, nisl non mollis finibus, quam
+velit rutrum augue, ac vulputate ipsum dui eget justo. Donec placerat leo metus,
+id dictum elit porta nec. Aenean ac metus ac lacus laoreet pellentesque eget in
+dolor~\cite[chap. 2]{latexcompanion} nec:
+\begin{itemize}[noitemsep]
+  \item Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+  \item Proin sodales justo eu ex tincidunt commodo.
+  \item Nam in lectus vehicula, porta libero in, interdum ipsum.
+  \item Sed iaculis sem ut nunc malesuada, pretium rutrum mauris dapibus.
+\end{itemize}
+Praesent facilisis magna eget rhoncus tempor. Morbi id mollis mi. Sed vestibulum
+congue justo, nec sodales elit. Maecenas hendrerit faucibus urna non cursus.
+Duis semper posuere bibendum. Cras pulvinar massa ac est rhoncus, ac eleifend
+leo ultricies. Donec a vehicula felis. Lorem ipsum dolor sit amet, consectetur
+adipiscing elit.
+
+\section{Review's summary}
+
+
+\begin{equation} \label{eq:skomplikowane}
+  L' = {L}{\sqrt{1-\frac{v^2}{c^2}}}
+\end{equation}
+Proin aliquam commodo felis, ut condimentum ipsum.
+\begin{equation} \label{eq:proste}
+  a = bq + r
+\end{equation}
+aliquam~\eqref{eq:proste} eu convallis \(a\) vel \(b\) porttitor a metus \(b
+\neq c\).
+
+
+
+\chapter{Theoretical background}
+\section{Fuzzy sets theory}
+In hac habitasse platea dictumst. Vestibulum maximus aliquam ante dignissim
+elementum. Praesent viverra enim faucibus tellus iaculis, nec tristique ipsum
+varius. Vivamus egestas a risus et venenatis. Vivamus sit amet quam nec leo
+sodales aliquet. Quisque ligula justo, vestibulum quis molestie eget, placerat
+vel ipsum. Vestibulum libero lacus, aliquet id porttitor figuris~\ref{fig:iz}
+in, tempor non magna. Fusce pretium ultricies leo, id tincidunt erat pharetra
+at. Quisque quis eros molestie, euismod metus at, dapibus est.
+\begin{figure}[ht]
+  \centering
+  \includegraphics[width=0.4\textwidth]{img/iz_logo.png}
+  \caption{Maecenas est izetum sollicitudin}
+  \label{fig:iz}
+\end{figure}
+
+Curabitur efficitur tempus urna. Pellentesque scelerisque nibh sit amet sem
+dictum bibendum. Duis ac eros scelerisque, venenatis sapien eu, bibendum velit.
+Nam pulvinar mi nulla, ultrices porta sapien mattis id. Nullam malesuada quam
+nec massa mattis tincidunt. Proin non posuere enim, ac rutrum lorem. Quisque
+lacinia leo eget justo dapibus dictum.
+
+Sed feugiat dapibus neque et sagittis. Mauris non scelerisque mi. Fusce
+fringilla lectus et tempor volutpat. Maecenas nec pharetra ante. Proin vel
+facilisis mauris. Nunc quis convallis turpis. Mauris lorem lacus, luctus vel
+scelerisque id, semper et felis. Morbi auctor, ante non finibus scelerisque,
+velit leo dignissim purus, in vehicula erat lacus eu lacus. Pellentesque
+elementum sollicitudin nisi, ac semper nunc sagittis et. Nunc sem lorem,
+condimentum at sodales eu, iaculis listingus~\ref{lst:program} ac justo.
+\begin{listing}[H]
+  \begin{minted}{c}
+#include <stdio.h>
+
+int main(void)
+{
+  printf("Salve mundi\n");
+  return 0;
+}
+  \end{minted}
+  \caption{Sagittis sollicitudin \texttt{printf} tortor}
+  \label{lst:program}
+\end{listing}
+
+Nam semper sodales magna ut tempus. Orci varius natoque penatibus et magnis dis
+parturient montes, nascetur ridiculus mus. Proin et sollicitudin lacus. Nunc non
+aliquet libero. Nam aliquam sagittis erat, quis tempus turpis ullamcorper sit
+amet. In vitae sapien id tortor ornare scelerisque in in massa. Nam quis velit
+non lorem auctor commodo vel in tortor. Donec sed nunc et libero mollis
+fringilla. Vivamus quis pellentesque purus, ut malesuada tellus. Suspendisse sit
+figuris~\ref{fig:wykres} ullamcorper, volutpat purus eget, ullamcorper arcu.
+\begin{figure}[ht]
+  \centering
+  \input{img/plot.pgf}
+  \caption{Nullam interdum maximus felis eu porttitor}
+  \label{fig:wykres}
+\end{figure}
+Quisque sed dapibus justo. Duis faucibus sem ac convallis ultricies. In at lacus
+mi. Quisque et tempus diam. Sed rhoncus efficitur erat, ac fringilla quam. Etiam
+porta rhoncus lorem at semper. Pellentesque a malesuada lacus. Vivamus lectus
+ex, pharetra eget nulla ut, vehicula sollicitudin sapien. Maecenas aliquam magna
+ac quam rutrum tincidunt. Nunc ultricies ullamcorper turpis, vel finibus leo
+vulputate eu. Fusce tristique ipsum vitae metus semper pulvinar. Nam libero
+enim, suscipit in purus ut, porta faucibus turpis. Fusce dapibus commodo semper.
+Mauris dignissim lorem id mauris congue, a pellentesque ipsum volutpat.
+{
+\section{Type-2 fuzzy systems}
+
+Ut sagittis est in leo porttitor finibus. Donec euismod viverra turpis, sit amet
+ultricies mi placerat ac. Sed non mollis nunc. Nulla interdum odio ut odio
+luctus convallis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
+in quam volutpat, porttitor diam egestas, tristique enim. Proin pellentesque
+nibh eleifend augue elementum commodo. Ut mattis risus ex, vel ultrices ligula
+sollicitudin nec. Vestibulum ante ipsum primis in faucibus orci luctus et
+ultrices posuere cubilia curae.
+\begin{enumerate}[noitemsep]
+  \item Vestibulum ut diam eget sapien molestie maximus.
+  \item Proin et mauris et justo vestibulum commodo.
+  \item Nunc ac diam sit amet urna fermentum feugiat ac eget odio.
+\end{enumerate}
+Integer sit amet enim id urna feugiat ultricies. Fusce sit amet orci felis.
+Maecenas tincidunt eleifend accumsan. Duis imperdiet ultrices ligula at porta.
+Cras aliquet elit dolor, et volutpat sem convallis non. Duis quam nisl,
+elementum ac commodo nec, fringilla non sem. Nulla consequat, velit a pharetra
+euismod, risus massa malesuada nisl, vitae cursus lorem purus eget augue.
+Pellentesque consequat tempus sapien, sed varius odio euismod sed. Lorem ipsum
+dolor sit amet, consectetur adipiscing elit. Aenean sit amet erat mi.
+\section{Rough sets theory and information systems}
+
+Donec ac purus non leo blandit condimentum. Morbi a urna eget velit consequat
+aliquam. Cras interdum lacus et finibus viverra. Sed porta tortor et nisi
+ultricies auctor. Aliquam ac finibus purus. Mauris bibendum mauris metus,
+consectetur dictum leo tincidunt ut. Nunc efficitur erat sed libero molestie,
+efficitur vehicula nunc blandit. Orci varius natoque penatibus et magnis dis
+parturient montes, nascetur ridiculus mus. Nullam non nisl id lorem porttitor
+varius quis a eros. Duis sodales nulla vehicula, molestie turpis eget, bibendum
+neque. Proin non nulla velit. Proin id ante massa. Suspendisse faucibus sed enim
+et ornare. Curabitur suscipit est odio. Nulla iaculis tempor placerat. Morbi
+quis diam sed quam elementum porttitor.
+}
+
+\chapter{Research and experiments}
+\
+
+\bibliography{literature.bib}
+
+\listoffigures
+
+\listoftables
+
+\listoflistings
+
+
+
+\end{document}
